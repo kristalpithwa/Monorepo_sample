@@ -1,0 +1,19 @@
+{
+  "name": "my-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:blog": "yarn workspace blog-app start",
+    "dev:jobs": "yarn workspace job-portal-app start",
+    "build:all": "yarn workspaces run build",
+    "type-check": "yarn workspaces run type-check",
+    "lint": "yarn workspaces run lint"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0"
+  }
+}
